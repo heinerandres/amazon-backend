@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - amaz-on
+name: Build and deploy Node.js app to Azure Web App - ecommerce-backend
 
 on:
   push:
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7FB9F0E974DF43F191A972555D112880 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_AF521FDEB7264881913DD02915028462 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0C748A5CA41542F4AC5FC6C499669B2B }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FF9DF9F67FD14785B92155A449DDC4C9 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8DDAF5D08E334E8688B880C660119302 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_29047662BA3E4E39897DB0A8102DFE50 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'amaz-on'
+          app-name: 'ecommerce-backend'
           slot-name: 'Production'
           package: .
           
