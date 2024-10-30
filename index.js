@@ -13,13 +13,13 @@ try{
     app.use( express.json() );
     app.use(cors());
 
-    app.use('/', (req, res) => {
-        res.send("hola mundo");
-    });
-
     app.use( '/api/articulo', require('./routes/articulo') );
 
     app.use('/api/carrito', require('./routes/carrito'));
+
+    app.use('/', (req, res) => {
+        res.send("hola mundo");
+    });
 
     app.listen( 8080, () => {
         console.log(`Servidor en puerto ${8080}`)
