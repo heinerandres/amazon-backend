@@ -1,5 +1,6 @@
 {
   "start": "index.js",
+  "test": "echo \"NoTest specified\" && exit 0",
   "name": "ecommerce-backend",
   "version": "1.0.0",
   "main": "index.js",
