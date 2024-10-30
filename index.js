@@ -9,13 +9,19 @@ const app = express();
 dbConnection();
 
 //body
-app.use( express.json() );
-app.use(cors());
+try{
+    app.use( express.json() );
+    app.use(cors());
 
-app.use( '/api/articulo', require('./routes/articulo') );
+    app.use( '/api/articulo', require('./routes/articulo') );
 
-app.use('/api/carrito', require('./routes/carrito'));
+    app.use('/api/carrito', require('./routes/carrito'));
 
-app.listen( process.env.PORT, () => {
-    console.log(`Servidor en puerto ${process.env.PORT}`)
-})
+    app.listen( 4000, () => {
+        console.log(`Servidor en puerto ${4000}`)
+    });
+}
+catch(error){
+    console.log( error );
+    throw new Error ( 'Error a la hora de inicializar la BD' );
+}
