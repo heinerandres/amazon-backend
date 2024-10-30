@@ -17,8 +17,8 @@ try{
 
     app.use('/api/carrito', require('./routes/carrito'));
 
-    app.listen( 4000, () => {
-        console.log(`Servidor en puerto ${4000}`)
+    app.listen( 8080, () => {
+        console.log(`Servidor en puerto ${8080}`)
     });
 }
 catch(error){
