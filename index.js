@@ -21,9 +21,9 @@ try{
     app.use('/api/carrito', require('./routes/carrito'));
 
     app.use('/', (req, res) => {
-        res.send("hola mundo");
+        res.sendFile(path.join(__dirname, 'public/index.html'));
     });
-
+    
     app.use('*', (req, res)=>{
         res.sendFile(path.join(__dirname, 'public/index.html'));
     });
